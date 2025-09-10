@@ -1,6 +1,6 @@
 # Affiliate Hub Dashboard
 
-![Affiliate Hub Dashboard](public/samsung.jpeg) A modern, responsive, and feature-rich web application designed to empower digital affiliate marketers. This platform provides tools to discover high-performing products, create multi-link campaigns, and analyze performance across various e-commerce and digital product marketplaces.
+A modern, responsive, and feature-rich web application designed to empower digital affiliate marketers. This platform provides tools to discover high-performing products, create multi-link campaigns, and analyze performance across various e-commerce and digital product marketplaces.
 
 ---
 
@@ -49,7 +49,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://your-repository-url.git](https://your-repository-url.git)
+    git clone [https://github.com/matheus-machado/clube-afiliados](https://github.com/matheus-machado/clube-afiliados)
     cd affiliate-hub-dashboard
     ```
 
