@@ -1,69 +1,96 @@
-# React + TypeScript + Vite
+# Affiliate Hub Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Affiliate Hub Dashboard](public/samsung.jpeg) A modern, responsive, and feature-rich web application designed to empower digital affiliate marketers. This platform provides tools to discover high-performing products, create multi-link campaigns, and analyze performance across various e-commerce and digital product marketplaces.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+-   **Product Discovery:** Browse and search for products from multiple marketplaces (Amazon, Mercado Livre, Shopee, etc.).
+-   **Advanced Filtering:** Filter products by marketplace, category, price range, ranking, and trending status.
+-   **Campaign Builder:** Select multiple products to create a single, shareable message with all affiliate links included.
+-   **Subscription Tiers:** A complete, visually appealing plans page comparing "Beginner" and "Pro" tiers with different feature sets.
+-   **Analytics Dashboard:** (Concept) A dedicated section to track link clicks, conversions, and campaign performance.
+-   **Responsive Design:** A mobile-first interface that works beautifully on all screen sizes.
+-   **Modern UI/UX:** Built with a clean, modern design system using Tailwind CSS.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📸 Screenshots
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Here's a glimpse of what Affiliate Hub looks like.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Dashboard & Filters                                   | Subscription Plans                                   |
+| ----------------------------------------------------- | ---------------------------------------------------- |
+| ![Dashboard View](public/image_4d62ab.jpg) | ![Plans Page](public/image_4cfc9b.jpg) |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+## 🛠️ Tech Stack
+
+This project is built with a modern and robust frontend stack:
+
+-   **Framework:** [React](https://react.dev/)
+-   **Language:** [TypeScript](https://www.typescriptlang.org/)
+-   **Build Tool:** [Vite](https://vitejs.dev/)
+-   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+-   **UI Components:** Headless primitives from [Radix UI](https://www.radix-ui.com/) (Dialogs, Tabs).
+-   **Component Variants:** [Class Variance Authority (CVA)](https://cva.style/)
+-   **Icons:** [Lucide React](https://lucide.dev/)
+-   **Utilities:** `clsx`, `tailwind-merge`
+
+## 🚀 Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+-   [Node.js](https://nodejs.org/) (version 18.x or higher recommended)
+-   [npm](https://www.npmjs.com/) (comes with Node.js)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://your-repository-url.git](https://your-repository-url.git)
+    cd affiliate-hub-dashboard
+    ```
+
+2.  **Install all dependencies:**
+    This command will install React, Vite, Tailwind CSS, and all other necessary packages from `package.json`.
+    ```bash
+    npm install
+    ```
+
+### Running the Application
+
+1.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+2.  **Open the application in your browser:**
+    Navigate to `http://localhost:5173` (or the URL provided in your terminal). The application will reload automatically when you make changes to the code.
+
+## 📂 Project Structure
+
+The project follows a standard Vite + React structure. Key directories include:
+
+```
+/
+├── public/               # Static assets (images, fonts)
+├── src/
+│   ├── components/       # Reusable React components (functional & UI)
+│   │   ├── ui/           # Generic UI components (Button, Card, Dialog)
+│   │   └── Plans.tsx     # Example of a page component
+│   ├── data/             # Mock data for products and analytics
+│   ├── lib/              # Utility functions (e.g., cn for classnames)
+│   ├── types/            # TypeScript type definitions
+│   ├── App.tsx           # Main application component
+│   ├── index.css         # Global styles & Tailwind directives
+│   └── main.tsx          # Application entry point
+├── package.json          # Project dependencies and scripts
+└── README.md             # This file
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📄 License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
